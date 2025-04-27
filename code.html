@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冠农股份 2024 年度报告 | GuanNong Shares 2024 Annual Report</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <!-- Font Awesome via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Framer Motion via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/framer-motion@10.16.4/dist/framer-motion.umd.min.js"></script>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        .bento-box {
+            background-color: #111; /* Slightly lighter than black */
+            border-radius: 1.5rem; /* 24px */
+            padding: 1.5rem; /* 24px */
+            border: 1px solid #222; /* Dark border */
+            overflow: hidden; /* Ensure content respects padding */
+            position: relative;
+        }
+        .highlight-text {
+            color: #E31937;
+        }
+        .highlight-border {
+            border: 1px solid #E31937;
+            /* Subtle glow effect */
+           /* box-shadow: 0 0 15px rgba(227, 25, 55, 0.5); */
+        }
+        .highlight-gradient-bg {
+             background: linear-gradient(145deg, rgba(227, 25, 55, 0.3) 0%, rgba(227, 25, 55, 0.05) 100%);
+        }
+         .sub-text {
+            color: #a0a0a0; /* Lighter gray */
+            font-size: 0.875rem; /* 14px */
+        }
+        .ultra-large {
+            font-size: clamp(3rem, 10vw, 6rem); /* Responsive large font */
+            line-height: 1;
+            font-weight: 800; /* Extra bold */
+        }
+        .metric-value {
+             font-size: clamp(2rem, 6vw, 4rem); /* Responsive metric font */
+             line-height: 1.1;
+             font-weight: 700; /* Bold */
+             color: #E31937;
+        }
+        .metric-change {
+            font-size: 1.125rem; /* 18px */
+        }
+        .metric-change.positive { color: #4ade80; } /* Green */
+        .metric-change.negative { color: #f87171; } /* Red */
+
+        /* Simple line chart placeholder styling */
+        .line-chart-placeholder svg {
+            stroke: #E31937;
+            stroke-width: 2;
+            fill: none;
+            opacity: 0.6;
+        }
+
+    </style>
+</head>
+<body class="font-sans">
+
+    <div class="container mx-auto px-4 py-12 md:py-20">
+
+        <!-- Header/Hero Section -->
+        <motion.div
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            class="text-center mb-16 md:mb-24"
+        >
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-2">新疆冠农股份有限公司</h1>
+            <h2 class="text-2xl md:text-4xl highlight-text font-semibold mb-4">2024 年度报告</h2>
+            <p class="text-lg text-gray-400">XINJIANG GUANNONG CO., LTD. | 2024 ANNUAL REPORT</p>
+            <p class="text-md text-gray-500 mt-2">股票代码 STOCK CODE: 600251</p>
+        </motion.div>
+
+        <!-- Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+            <!-- Box 1: Revenue -->
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+                class="bento-box lg:col-span-2 highlight-gradient-bg"
+            >
+                <h3 class="text-xl font-semibold mb-2">营业收入 <span class="text-gray-400 text-sm">OPERATING REVENUE</span></h3>
+                <p class="metric-value">¥38.63<span class="text-2xl text-white"> 亿</span></p>
+                <p class="metric-change negative mt-2"><i class="fas fa-arrow-down mr-1"></i> -11.15% <span class="sub-text"> vs 2023 (¥43.48亿)</span></p>
+                <p class="sub-text mt-4">主要受番茄出口疲弱及内销产品价格下行影响。</p>
+                <i class="fas fa-receipt absolute text-6xl md:text-8xl text-[#E31937] opacity-10 bottom-4 right-4 -z-10"></i>
+            </motion.div>
+
+            <!-- Box 2: Net Profit -->
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                class="bento-box lg:col-span-2"
+            >
+                <h3 class="text-xl font-semibold mb-2">归母净利润 <span class="text-gray-400 text-sm">NET PROFIT</span></h3>
+                <p class="metric-value">¥2.05<span class="text-2xl text-white"> 亿</span></p>
+                <p class="metric-change negative mt-2"><i class="fas fa-arrow-down mr-1"></i> -71.58% <span class="sub-text"> vs 2023 (¥7.20亿)</span></p>
+                 <p class="sub-text mt-4">扣非净利润 ¥2.14亿, 同比 -69.22%</p>
+                 <i class="fas fa-sack-dollar absolute text-6xl md:text-8xl text-[#E31937] opacity-10 bottom-4 right-4 -z-10"></i>
+            </motion.div>
+
+            <!-- Box 3: EPS -->
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+                class="bento-box"
+            >
+                <h3 class="text-lg font-semibold mb-2">每股收益 <span class="text-gray-400 text-xs">EPS</span></h3>
+                 <p class="text-4xl highlight-text font-bold">¥0.26</p>
+                 <p class="metric-change negative mt-1 text-base"><i class="fas fa-arrow-down mr-1"></i> -71.74%</p>
+                 <p class="sub-text text-sm mt-2">基本与稀释每股收益</p>
+                 <i class="fas fa-coins absolute text-5xl text-[#E31937] opacity-10 bottom-4 right-4 -z-10"></i>
+            </motion.div>
+
+            <!-- Box 4: ROE -->
+             <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+                class="bento-box"
+            >
+                 <h3 class="text-lg font-semibold mb-2">净资产收益率 <span class="text-gray-400 text-xs">ROE</span></h3>
+                 <p class="text-4xl highlight-text font-bold">5.53%</p>
+                 <p class="sub-text text-sm mt-1">加权平均</p>
+                 <p class="sub-text text-xs mt-1">Decreased by 14.88 p.p.</p>
+                 <i class="fas fa-percentage absolute text-5xl text-[#E31937] opacity-10 bottom-4 right-4 -z-10"></i>
+            </motion.div>
+
+            <!-- Box 5: Dividend -->
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                class="bento-box lg:col-span-2 highlight-border"
+            >
+                <h3 class="text-xl font-semibold mb-2">利润分配 <span class="text-gray-400 text-sm">DIVIDEND PLAN</span></h3>
+                <p class="text-4xl font-bold mb-1">每10股派 <span class="highlight-text">¥0.8</span></p>
+                <p class="sub-text mb-3">(含税 Tax Included)</p>
+                <p class="text-lg">总派现 <span class="highlight-text font-semibold">¥6216万</span></p>
+                <p class="text-lg">现金分红比例 <span class="highlight-text font-semibold">30.38%</span></p>
+                 <i class="fas fa-hand-holding-dollar absolute text-6xl md:text-8xl text-[#E31937] opacity-10 bottom-4 right-4 -z-10"></i>
+            </motion.div>
+
+             <!-- Box 6: Cash Flow -->
+             <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+                class="bento-box"
+            >
+                 <h3 class="text-lg font-semibold mb-2">经营现金流 <span class="text-gray-400 text-xs">OPERATING CASH FLOW</span></h3>
+                 <p class="text-4xl font-bold">¥5.67<span class="text-xl text-white"> 亿</span></p>
+                 <p class="metric-change positive mt-1 text-base"><i class="fas fa-arrow-up mr-1"></i> +176.80%</p>
+                 <p class="sub-text text-sm mt-2">净额 Net Amount</p>
+                 <i class="fas fa-water absolute text-5xl text-[#E31937] opacity-10 bottom-4 right-4 -z-10"></i>
+            </motion.div>
+
+            <!-- Box 7: Total Assets -->
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+                class="bento-box"
+            >
+                <h3 class="text-lg font-semibold mb-2">总资产 <span class="text-gray-400 text-xs">TOTAL ASSETS</span></h3>
+                <p class="text-4xl font-bold">¥71.59<span class="text-xl text-white"> 亿</span></p>
+                 <p class="metric-change negative mt-1 text-base"><i class="fas fa-arrow-down mr-1"></i> -8.23%</p>
+                 <p class="sub-text text-sm mt-2">年末 Year-End</p>
+                 <i class="fas fa-building-columns absolute text-5xl text-[#E31937] opacity-10 bottom-4 right-4 -z-10"></i>
+            </motion.div>
+
+            <!-- Box 8: Net Assets -->
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+                class="bento-box"
+            >
+                 <h3 class="text-lg font-semibold mb-2">归母净资产 <span class="text-gray-400 text-xs">NET ASSETS</span></h3>
+                 <p class="text-4xl font-bold">¥35.92<span class="text-xl text-white"> 亿</span></p>
+                 <p class="metric-change negative mt-1 text-base"><i class="fas fa-arrow-down mr-1"></i> -4.65%</p>
+                 <p class="sub-text text-sm mt-2">年末 Year-End</p>
+                 <i class="fas fa-chess-rook absolute text-5xl text-[#E31937] opacity-10 bottom-4 right-4 -z-10"></i>
+            </motion.div>
+
+            <!-- Box 9: R&D -->
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                class="bento-box"
+            >
+                <h3 class="text-lg font-semibold mb-2">研发投入 <span class="text-gray-400 text-xs">R&D INVESTMENT</span></h3>
+                <p class="text-4xl font-bold">¥5048<span class="text-xl text-white"> 万</span></p>
+                <p class="metric-change positive mt-1 text-base"><i class="fas fa-arrow-up mr-1"></i> +60.99%</p>
+                <p class="sub-text text-sm mt-2">设立博士后科研工作站</p>
+                 <i class="fas fa-flask-vial absolute text-5xl text-[#E31937] opacity-10 bottom-4 right-4 -z-10"></i>
+            </motion.div>
+
+            <!-- Box 10: Business Segments -->
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+                class="bento-box lg:col-span-2"
+            >
+                <h3 class="text-xl font-semibold mb-3">核心业务 <span class="text-gray-400 text-sm">CORE BUSINESS</span></h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div><i class="fas fa-pepper-hot mr-2 highlight-text"></i>番茄产业 TOMATO</div>
+                    <div><i class="fas fa-cotton-boll mr-2 highlight-text"></i>棉花产业 COTTON</div>
+                    <div><i class="fas fa-oil-well mr-2 highlight-text"></i>油脂产业 OIL</div>
+                    <div><i class="fas fa-cubes mr-2 highlight-text"></i>制糖产业 SUGAR</div>
+                </div>
+                 <p class="sub-text text-sm mt-4">聚焦新疆特色农产品加工，延伸产业链。</p>
+                 <i class="fas fa-industry absolute text-6xl md:text-8xl text-[#E31937] opacity-10 bottom-4 right-4 -z-10"></i>
+            </motion.div>
+
+            <!-- Box 11: Audit -->
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+                 class="bento-box flex flex-col justify-center items-center text-center"
+            >
+                <i class="fas fa-stamp text-5xl mb-3 highlight-text"></i>
+                <h3 class="text-lg font-semibold mb-1">审计意见</h3>
+                <p class="sub-text mb-2">AUDIT OPINION</p>
+                <p class="text-xl font-semibold">标准无保留意见</p>
+                <p class="sub-text text-sm mt-1">Standard Unqualified</p>
+                <p class="sub-text text-xs mt-1">大信会计师事务所</p>
+            </motion.div>
+
+             <!-- Box 12: Outlook -->
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+                class="bento-box lg:col-span-2"
+            >
+                 <h3 class="text-xl font-semibold mb-2">2025 展望 <span class="text-gray-400 text-sm">OUTLOOK</span></h3>
+                 <p class="text-3xl font-bold mb-2">目标：净利润增长 <span class="highlight-text">7%</span></p>
+                 <ul class="list-disc list-inside sub-text space-y-1 text-sm">
+                     <li>深化国企改革 Deepen SOE reform</li>
+                     <li>聚焦科技引领 Focus on Tech</li>
+                     <li>强化品牌建设 Enhance Branding</li>
+                     <li>加强风险管控 Strengthen Risk Control</li>
+                 </ul>
+                 <i class="fas fa-binoculars absolute text-6xl md:text-8xl text-[#E31937] opacity-10 bottom-4 right-4 -z-10"></i>
+            </motion.div>
+
+             <!-- Box 13: ESG Placeholder -->
+             <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                class="bento-box"
+            >
+                 <h3 class="text-lg font-semibold mb-2">环境与社会</h3>
+                 <p class="sub-text mb-2 text-sm">ENVIRONMENT & SOCIAL</p>
+                 <p class="text-3xl font-bold highlight-text">¥672<span class="text-lg text-white"> 万</span></p>
+                 <p class="sub-text text-sm mt-1">环保投入 Environmental Investment</p>
+                 <p class="sub-text text-xs mt-2">推动绿色发展 Promote Green Dev.</p>
+                 <i class="fas fa-seedling absolute text-5xl text-[#E31937] opacity-10 bottom-4 right-4 -z-10"></i>
+            </motion.div>
+
+            <!-- Box 14: Line Chart Placeholder -->
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+                class="bento-box line-chart-placeholder flex flex-col justify-end"
+            >
+                <h3 class="text-lg font-semibold mb-2">市场趋势</h3>
+                <p class="sub-text text-sm mb-4">MARKET TRENDS</p>
+                <!-- Simple SVG Placeholder -->
+                <svg viewBox="0 0 100 40" preserveAspectRatio="none" class="w-full h-16">
+                    <polyline points="0,35 15,20 30,25 45,10 60,15 75,30 90,20 100,35" />
+                </svg>
+                <p class="sub-text text-xs mt-1 text-center">棉花/白糖价格波动 Price Fluctuation</p>
+            </motion.div>
+
+        </div>
+
+        <!-- Footer -->
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.5 }}
+            class="text-center mt-16 md:mt-24 text-gray-600 text-sm"
+        >
+            <p>新疆冠农股份有限公司 | XINJIANG GUANNONG CO., LTD.</p>
+            <p>报告期：2024年1月1日至2024年12月31日 | Reporting Period: Jan 1, 2024 - Dec 31, 2024</p>
+            <p>董事会编制日期：2025年4月2日 | Compiled by the Board: April 2, 2025</p>
+            <p class="mt-2">数据来源：公司2024年年度报告 | Data Source: Company 2024 Annual Report</p>
+            <p>本页面仅为报告摘要，完整信息请查阅公司公告。</p>
+            <p>This page is a summary. Please refer to official announcements for complete information.</p>
+        </motion.div>
+
+    </div>
+
+    <!-- Include Framer Motion Script for initialization -->
+    <script>
+        // Basic Framer Motion setup (if needed, often works automatically with whileInView)
+        // You might need more complex setup for staggered animations or scroll-linked effects
+    </script>
+
+</body>
+</html>
